@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.UUID;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -40,7 +41,7 @@ public class FooResource {
 	@POST
 	@Consumes(APPLICATION_JSON)
 	@Produces(APPLICATION_JSON)
-	public Response save(CreateFooRequest createFooRequest) {
+	public Response save(@Valid CreateFooRequest createFooRequest) {
 		String id = UUID.randomUUID().toString();
 		Foo foo = new Foo(id, createFooRequest.getBar());
 		fooRepository.save(foo);

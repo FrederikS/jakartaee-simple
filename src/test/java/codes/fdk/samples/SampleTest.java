@@ -1,10 +1,7 @@
 package codes.fdk.samples;
 
-import org.junit.jupiter.api.Test;
-import codes.fdk.samples.jakartaee.CreateFooRequest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import javax.json.bind.Jsonb;
-import javax.json.bind.JsonbBuilder;
+import org.junit.jupiter.api.Test;
 
 public class SampleTest {
 
